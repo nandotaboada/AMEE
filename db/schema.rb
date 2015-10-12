@@ -11,15 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151009002547) do
+ActiveRecord::Schema.define(version: 20151011030231) do
 
   create_table "colaboradores", force: :cascade do |t|
     t.string   "nome",       limit: 255
-    t.string   "matricula",  limit: 8
+    t.string   "matricula",  limit: 255
     t.string   "contrato",   limit: 255
     t.float    "salario",    limit: 24
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "usuarios", force: :cascade do |t|
+    t.string   "nome",            limit: 255
+    t.string   "email",           limit: 255
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.string   "password_digest", limit: 255
   end
 
 end

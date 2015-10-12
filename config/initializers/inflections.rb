@@ -20,6 +20,7 @@ ActiveSupport::Inflector.inflections do |inflect|
   inflect.singular /^(ox)en/i, '\1'
 
   inflect.irregular 'colaborador', 'colaboradores'
+  inflect.irregular 'usuario', 'usuarios'
 
   inflect.uncountable 'equipment'
 end
